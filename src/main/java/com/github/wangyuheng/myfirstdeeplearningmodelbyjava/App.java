@@ -24,14 +24,16 @@ public final class App {
     private static final Logger log = LoggerFactory.getLogger(App.class);
 
     public static void main(String[] args) throws IOException, TranslateException {
-//        initDataset();
-//        train();
+        initDataset();
+        train();
         inference();
     }
 
     private static void initDataset() throws IOException {
         if (!Paths.get("dataset", "mnist").toFile().exists()) {
+            log.info("start init dataset");
             ZipUtils.unzip(Files.newInputStream(Paths.get("dataset", "mnist.zip")), Paths.get("dataset"));
+            log.info("end init dataset");
         }
     }
 
