@@ -231,7 +231,7 @@ public static Integer recognition(Image img) throws IOException, TranslateExcept
 }
 ```
 
-![first_4](.doc/first_4.png)
+![first_09](.doc/first_09.png)
 
 
 ## 其他
